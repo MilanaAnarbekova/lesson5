@@ -5,31 +5,37 @@ package com.company;
  в другом только здоровье и урон. Добавить в класс Hero геттеры для всех полей.
 */
 public class Hero {
-    private int heroHealth;
-    private int heroDamage;
+    private int heroesHealth;
+    private int heroesDamage;
     private String heroesPower;
+    private String heroesName;
 
-    public Hero(int heroHealth, int heroDamage, String heroesPower) {
-        this.heroHealth = heroHealth;
-        this.heroDamage = heroDamage;
+    public Hero(String heroesName ,int heroHealth, int heroDamage, String heroesPower ) {
+        this.heroesHealth = heroHealth;
+        this.heroesDamage = heroDamage;
         this.heroesPower = heroesPower;
+        this.heroesName = heroesName ;
 
     }
 
     public Hero(int heroHealth, int heroDamage) {
-        this.heroHealth = heroHealth;
-        this.heroDamage = heroDamage;
+        this.heroesHealth = heroHealth;
+        this.heroesDamage = heroDamage;
     }
 
     public int getHeroDamage() {
-        return heroDamage;
+        return heroesDamage;
     }
 
     public int getHeroHealth() {
-        return heroHealth;
+        return heroesHealth;
     }
 
     public String getHeroesPower() {
         return heroesPower;
+    }
+
+    public String getHeroesName() {
+        return heroesName;
     }
 }

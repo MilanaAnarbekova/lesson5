@@ -10,6 +10,7 @@ package com.company;
  как возвращаемый результат метода createHeroes. Hero[]
 Затем вызвать этот метод в методе main и распечатать информацию о всех героях массива через цикл.*/
 public class Main {
+    public static String [] heroesName= {"Kakashi", "Naruto", "Sakura"};
 
     public static void main(String[] args) {
         Boss boss = new Boss();
@@ -17,8 +18,35 @@ public class Main {
         boss.setBossDamage(60);
         boss.setBossBlock(20);
 
+
         System.out.println("Boss block = " + boss.getBossBlock() + "; "
                 + "Boss damage = " + boss.getBossDamage() + "; " + "Boss health= " + boss.getBossHealth());
+
+        Hero[] heroesArray = createHeroes();
+
+        for (Hero h : heroesArray)
+            System.out.println("Hero Name = " + h.getHeroesName()+ " ; " + "Hero Power = " +
+                      h.getHeroesPower() + " ; " + "Hero Damage = " + h.getHeroDamage() +
+                    " ; " + "Hero Health = " +  h.getHeroHealth());
     }
 
+    public static Hero[] createHeroes() {
+        Hero[] arrHeroes = new Hero[3];
+        arrHeroes[0] = new Hero("Kakashi",300, 30, "chidori");
+        arrHeroes[1] = new Hero("Naruto",500, 50, "rasengan");
+        arrHeroes[2] = new Hero("Sakura",250, 40, "super strong");
+
+        return arrHeroes;
+    }
+
+
+//    public static void createHeroes() {
+//        Hero kakashi = new Hero(300, 30, "chidori");
+//        Hero naruto = new Hero(500,50,"rasengan");
+//        Hero sakura = new Hero(250,29,"super strong");
+//    }
+
+//    public static int [] heroes(){
+//        int [] heroesArray = (kakashi)
+//    }
 }
